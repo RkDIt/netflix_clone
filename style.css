@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Netflix";
+    src: url("netflix-sans-font/NetflixSans-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Netflix";
+    src: url("netflix-sans-font/NetflixSans-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Netflix";
+    src: url("netflix-sans-font/NetflixSans-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Applying the bold font */
+body{
+    margin: 0;
+    padding:0;
+    font-family: "Netflix", sans-serif;
+    font-weight:normal;
+}

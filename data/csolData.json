@@ -1,0 +1,25 @@
+{
+    "movies": [
+      {
+        "title": "Inception",
+        "year": 2010,
+        "director": "Christopher Nolan",
+        "genre":"Action/Sci-fi",
+        "image":"https://r4.wallpaperflare.com/wallpaper/82/715/741/inception-buildings-hd-brown-high-rise-buildings-wallpaper-ec60c89e0841ab00a862289288114182.jpg"
+      },
+      {
+        "title": "The Joker",
+        "year": 2019,
+        "director": "Shayna Markowitz",
+        "genre":"Thriller/Crime",
+        "image":"https://r4.wallpaperflare.com/wallpaper/495/164/47/joker-2019-movie-joker-hd-wallpaper-6990480df17aad3b6657e8bf10d1c6bd.jpg"
+      },
+      {
+        "title": "Interstellar",
+        "year": 2014,
+        "director": "Christopher Nolan"
+      }
+    ]
+    
+  }
+  
