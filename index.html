@@ -1,37 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix Clone</title>
     <!-- Include Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-black text-white">
+    <style>
+      /* Add this to create the transparent gradient effect for the navbar */
+      .navbar {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0));
+      }
 
-    <nav class="flex justify-between items-center h-20 px-20">
-     
-        <div class="flex items-center space-x-8">
-            
-            <a href="#" class="ml-20">
-                <img width="144" height="144" src="https://img.icons8.com/color/144/netflix.png" alt="netflix"/>
-            </a>
-           
-            <div class="flex items-center space-x-8">
-                <a href="#" class="ml-10 hover:opacity-50 transition duration-300 ">
-                    <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/FFFFFF/search.png" alt="search"/>
-                </a>
-                <a href="index.html" class="text-red-400 hover:text-gray-400 transition duration-300"><h1>Home</h1></a>
-                <a href="contacts.html" class="hover:text-gray-400 transition duration-300"><h1>Contact</h1></a>
-            </div>
-        </div>
-        <!-- User Icon -->
-        <a href="#" class="mr-20 hover:opacity-50 transition duration-300">
-            <img width="40" height="40" src="https://img.icons8.com/fluency-systems-filled/96/FFFFFF/user-male-circle.png" alt="user-male-circle"/>
+      /* Adjust z-index so that the carousel is behind the navbar */
+      .slideshow-container {
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white">
+    <!-- Navbar with transparent gradient -->
+    <nav class="flex justify-between items-center h-20 px-20 navbar absolute top-0 left-0 right-0 z-10">
+      <div class="flex items-center space-x-8">
+        <a href="#" class="ml-20">
+          <img
+            width="144"
+            height="144"
+            src="https://img.icons8.com/color/144/netflix.png"
+            alt="netflix"
+          />
         </a>
-    </nav>
-   
-</body>
 
-<script src="./fetch/getdata.js"></script>
+        <div class="flex items-center space-x-8">
+          <a href="#" class="ml-10 hover:opacity-50 transition duration-300">
+            <img
+              width="20"
+              height="20"
+              src="https://img.icons8.com/ios-filled/50/FFFFFF/search.png"
+              alt="search"
+            />
+          </a>
+          <a
+            href="index.html"
+            class="text-red-400 hover:text-gray-400 transition duration-300"
+            ><h1>Home</h1></a
+          >
+          <a
+            href="contacts.html"
+            class="hover:text-gray-400 transition duration-300"
+            ><h1>Contact</h1></a
+          >
+        </div>
+      </div>
+      <!-- User Icon -->
+      <a href="#" class="mr-20 hover:opacity-50 transition duration-300">
+        <img
+          width="40"
+          height="40"
+          src="https://img.icons8.com/fluency-systems-filled/96/FFFFFF/user-male-circle.png"
+          alt="user-male-circle"
+        />
+      </a>
+    </nav>
+
+    <!-- Slideshow Section -->
+    <div class="relative h-[90vh] overflow-hidden slideshow-container">
+      <!-- Slideshow Container -->
+      <div
+        id="slideshow"
+        class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-in-out"
+      ></div>
+
+      <!-- Overlay Content -->
+      <div class="relative z-10 flex flex-col items-left justify-center h-full bg-black bg-opacity-50 ">
+        <h1 id="title" class="text-6xl font-bold mb-2 ml-40 ">Movie Title</h1>
+        <p id="genre" class="ml-40"></p>
+        <p id="description" class="mt-4 text-lg max-w-2xl ml-40">Movie Description</p>
+      </div>
+    </div>
+  </body>
+  <script src="./fetch/getdata.js"></script>
 </html>
