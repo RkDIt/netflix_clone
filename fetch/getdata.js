@@ -8,6 +8,16 @@ fetch('./data/csolData.json')
     const title = document.getElementById("title");
     const description = document.getElementById("description");
     const genre = document.getElementById("genre");
+    const watchNow = document.getElementById("watch")
+
+    watchNow.addEventListener("click",()=> {
+      const movie = data[currentIndex]
+
+      console.log(movie);
+
+      window.location.href = "../Dashboard"
+    })
+
 
     function updateSlideshow() {
       const movie = data[currentIndex]; // Access the current movie directly from the data array
@@ -15,6 +25,9 @@ fetch('./data/csolData.json')
       title.textContent = movie.title;
       description.textContent = movie.description;
       genre.textContent = movie.genre
+
+      
+      
     }
 
     function nextSlide() {
@@ -24,7 +37,8 @@ fetch('./data/csolData.json')
 
     // Initialize Slideshow
     updateSlideshow();
-    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+   
+    setInterval(nextSlide, 6000); // Change slide every 5 seconds
   })
   .catch(error => {
     console.log(error);
