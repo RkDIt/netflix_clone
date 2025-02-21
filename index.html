@@ -109,20 +109,24 @@
 
           <!-- Watch Trailer Button -->
           <button
-            class="min-w-[150px] min-h-[60px] w-full sm:w-[60vw] md:w-[18vw] h-12 md:h-[7vh] border-2 border-white hover:bg-red-700 hover:border-transparent text-white text-lg sm:text-xl md:text-2xl font-bold rounded-lg mt-4 md:mt-8 transition-all duration-300 ease-in-out"
+            class="relative overflow-hidden group min-w-[150px] min-h-[60px] w-full sm:w-[60vw] md:w-[15vw] h-12 md:h-[7vh] bg-white/30 text-white text-lg sm:text-xl md:text-2xl font-bold rounded-lg mt-4 md:mt-8 transition-all duration-300 ease-in-out "
           >
-            Watch Trailer
+            <span
+              class="absolute inset-0 bg-red-700 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"
+            ></span>
+            <span class="relative z-10">Watch Trailer</span>
           </button>
         </div>
       </div>
     </div>
 
-    <div  id="categorySection">
-      <div id="trendingMovies">
-          
-      </div>
+    <div id="categorySection">
+      <div id="trendingMovies"></div>
     </div>
   </body>
+
+  <!--https://image.tmdb.org/t/p/original/  path to images and backdrop-->
   <script src="./fetch/getdata.js"></script>
   <script src="./other js/slideshow.js"></script>
+  <script src="./fetch/getTrendingMovie.js"></script>
 </html>

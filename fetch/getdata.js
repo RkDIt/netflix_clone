@@ -1,3 +1,4 @@
+
 fetch('./data/csolData.json')
   .then(response => response.json())
   .then(movie_data => {
